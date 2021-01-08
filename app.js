@@ -4,9 +4,12 @@ const express = require('express');
 const axios = require('axios');
 const nodemailer = require('nodemailer');
 const app = express();
-
+const cron = require('node-cron');
 const emailconfig = require('./emailconfig');
 
+cron.schedule('* * * * *', function () {
+console.log('Testing');
+});
 
 
 app.use('/', (req, res, next) => {
