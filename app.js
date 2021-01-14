@@ -12,7 +12,7 @@ cron.schedule('*/5 * * * *', function () {
       .then(function (response) {
           console.log(response.data.price);
 
-          if(response.data.price < 38200){  //change back to less than
+          if(response.data.price < 38000){  //change back to less than
 
             const transporter = nodemailer.createTransport({
               service: 'gmail',
